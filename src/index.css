@@ -1,0 +1,187 @@
+a,
+h1,
+h2,
+h3,
+ul,
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  background-color: #D9CCC1;
+  overflow-y: scroll;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.principal{
+  display: flex;
+  flex-direction: column;
+}
+
+#img_receita{
+  padding: 5px;
+  border: 4px solid #8C503A;
+  border-radius: 10px;
+}
+
+#titulo_receita{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#link_receita{
+  font-size: 20px;
+  color: #8C503A;
+  text-align: center;
+}
+
+#link_receita:hover{
+  color: #024059;
+}
+
+.receita{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+#container_receita{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+img{
+  width: 400px;
+  height: 300px;
+}
+
+header {
+  grid-area: header;
+  padding: 20px;
+}
+
+h1{
+  color: #BF6415;
+}
+
+h3{
+  color: #8C503A;
+  font-weight: 600;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #D9CCC1;
+}
+
+main {
+  grid-area: main;
+  background-color: #D9CCC1;
+  min-width: 80vh;
+}
+
+footer {
+  grid-area: footer;
+}
+
+#root {
+  min-height: 100vh;
+  font-family: "Roboto";  
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+  display: grid;
+  grid-template:
+    "header header header" minmax(auto, 15vh)
+    "nav nav nav" minmax(auto, 9vh)
+    "main main main"
+    "footer footer footer" minmax(auto, 9vh);
+}
+
+#root > * {
+  margin: 2px;
+  background-color: #D9CCC1;
+}
+
+#root > main > div > div {
+  text-align: left;
+  font-size: 10pt;
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  color: #024059;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 3px;
+}
+
+#root > nav{
+  display: flex;
+  justify-content: center;
+}
+
+#root > nav > ul li a {
+  display: block;
+  color: #024059;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#root > nav > ul li a:hover {
+  color: #BF6415;
+}
+
+
+#root > main > div.principal {
+  padding: 50px;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  body {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1500px) {
+  body {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (min-width: 3000px) {
+  body {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
